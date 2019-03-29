@@ -1,0 +1,29 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    // enforce consistent linebreak style
+    "linebreak-style": 0,
+    // disallow the use of console
+    "no-console": 0,
+    // enforce consistent line breaks inside braces
+    "object-curly-newline": [1, {
+      "ObjectExpression": { "multiline":  true },
+      "ObjectPattern":{ "multiline": true, "minProperties": 3 },
+      "ImportDeclaration": { "multiline": true, "minProperties": 3 },
+      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+    }]
+  },
+  "plugins": ["import"],
+  "globals": {
+  }
+}
